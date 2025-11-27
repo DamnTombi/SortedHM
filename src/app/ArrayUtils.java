@@ -2,7 +2,7 @@ package app;
 
 
 public class ArrayUtils {
-    public void mergeSort(int[] array,int left,int right){
+    public static void mergeSort(int[] array,int left,int right){
         if(left<right){
             int mid = (left+right)/2;
             mergeSort(array,left,mid);
@@ -11,7 +11,7 @@ public class ArrayUtils {
         }
     }
 
-        public  void merge(int[] array, int left, int mid, int right){
+        public static void merge(int[] array, int left, int mid, int right){
             int n1 = mid-left+1;
             int n2 = right-mid;
 

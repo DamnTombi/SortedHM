@@ -14,15 +14,14 @@ public class Main {
         System.out.println("Исходный масив: "+Arrays.toString(arr));
         System.out.println("Длинна масива: "+arrLength);
 
-        ArrayUtils utils = new ArrayUtils();
-        utils.mergeSort(arr, 0, arr.length-1);
+        ArrayUtils.mergeSort(arr, 0, arr.length-1);
 
-        System.out.println("Отсортированій масив: "+Arrays.toString(arr));
+        System.out.println("Отсортированый масив: "+Arrays.toString(arr));
 
-        int target = arr[ThreadLocalRandom.current().nextInt(0, arr.length-1)];
+        int target = arr[ThreadLocalRandom.current().nextInt(arr.length)];
         System.out.println("Выбраное число: "+target);
 
-        int index = Arrays.binarySearch(arr, target);
+        int index = ArrayUtils.binarySearch(arr, target);
 
         if(index>=0){
             System.out.println("Єлемент найден на позиции: "+(index+1));
@@ -37,10 +36,10 @@ public class Main {
         int target2 = -2;
         System.out.println("Выбраное число: "+target2);
 
-        int index2 = Arrays.binarySearch(arr, target2);
+        int index2 = ArrayUtils.binarySearch(arr, target2);
 
         if(index2>=0){
-            System.out.println("Єлемент найден на позиции: "+(index+1));
+            System.out.println("Єлемент найден на позиции: "+(index2+1));
         }
         else{
             System.out.println("Елемент не найден");
